@@ -32,7 +32,7 @@ $(document).ready(function () {
             else {
                 // DONE: 填充数据
                 // set the new data
-                $("#jqGrid").jqGrid('setGridParam', { data: data.users });
+                $("#jqGrid").jqGrid('setGridParam', { data: data.msgs });
                 // hide the show message
                 $("#jqGrid")[0].grid.endReq();
                 // refresh the grid
