@@ -45,4 +45,6 @@ $(document).ready(function () {
         var newDate = new Date(cellValue);
         return newDate.toLocaleDateString() + " " + newDate.toLocaleTimeString();
     };
+
+    setInterval(retrieve,30000);
 });
