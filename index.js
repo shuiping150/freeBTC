@@ -10,7 +10,7 @@ $(document).ready(function () {
         //url: 'data.json',
         datatype: "local",
         colModel: [
-           { label: '时间', name: 'LogDate', width: 30, sorttype: 'date' },
+           { label: '时间', name: 'LogDate', width: 30, sorttype: 'date', formatter: formatdate },
            { label: '日志', name: 'Msg', width: 75 }
         ],
         viewrecords: true, // show the current page, data rang and total records on the toolbar
@@ -39,5 +39,10 @@ $(document).ready(function () {
                 $("#jqGrid").trigger('reloadGrid');
             }
         }, "json");
+    };
+
+    function formatdate(cellValue, options, rowObject) {
+        var newDate = new Date(cellValue.toString() + " UTC");
+        return newDate;
     };
 });
