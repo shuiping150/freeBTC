@@ -42,7 +42,7 @@ $(document).ready(function () {
     };
 
     function formatdate(cellValue, options, rowObject) {
-        var newDate = new Date(cellValue.toString() + " UTC");
-        return newDate;
+        var newDate = new Date(cellValue);
+        return newDate.toLocaleDateString() + " " + newDate.toLocaleTimeString();
     };
 });
